@@ -1,66 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jeevan MT - Bio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Jeevan MT - Bio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Jeevan MT</h1>
-    <p>Computer Science and Engineering Student</p>
-    <nav>
-      <a href="index.html">Home</a> | 
-      <a href="resume.html">Resume</a> |
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+    <header>
+        <div class="container navbar-container">
+            <h1>Jeevan MT</h1>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I'm a Computer Science and Engineering student who enjoys programming and building useful projects. 
-      I focus on improving my problem-solving skills and learning modern technologies.
-    </p>
-  </section>
+    <section class="hero">
+        <div class="container">
+            <h2>Hello, I'm Jeevan</h2>
+            <p>CSE Student | Developer | Tech Enthusiast</p>
+            <a href="#projects" class="cta-button">View My Work</a>
+        </div>
+    </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>C++</li>
-      <li>Java</li>
-      <li>Python (basics)</li>
-      <li>HTML & CSS</li>
-    </ul>
-  </section>
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p>
+                I'm a Computer Science and Engineering student with a strong passion for programming and creating impactful, real-world projects. I'm constantly focused on honing my problem-solving skills and staying up-to-date with modern technologies. I love building things that make a difference, whether it's a simple tool or a complex application.
+            </p>
+        </div>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li>Text-based Adventure Game</li>
-      <li>Virtual Garden Planner</li>
-      <li>To-Do List Tracker</li>
-    </ul>
-  </section>
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
+                    <h4>C++ / Java</h4>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h4>Web Development</h4>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-python"></i>
+                    <h4>Python</h4>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>
-      <a href="mailto:jeevanthandey@gmail.com">📧 jeevanthandey@gmail.com</a>
-    </p>
-    <p>
-      <a href="https://www.linkedin.com/in/jeevan-m-t-276697290" target="_blank">🔗 LinkedIn</a>
-    </p>
-    <p>
-      <a href="https://github.com/JeevanMT" target="_blank">💻 GitHub</a>
-    </p>
-  </section>
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Text-Based Adventure Game</h3>
+                    <p>A console-based interactive game where users navigate a story by making choices, built to strengthen fundamental programming logic.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Virtual Garden Planner</h3>
+                    <p>A simple web-based tool for users to visualize and organize a virtual garden layout digitally, showcasing front-end development skills.</p>
+                </div>
+                <div class="project-card">
+                    <h3>To-Do List Tracker</h3>
+                    <p>A responsive task management web application that allows users to add, remove, and track tasks efficiently.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    <p>© 2025 Jeevan MT</p>
-  </footer>
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-content">
+                <div class="contact-form-container">
+                    <form class="contact-form">
+                        <input type="text" placeholder="Name" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="tel" placeholder="Mobile">
+                        <textarea placeholder="Message" rows="6"></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <p>Or connect with me directly:</p>
+                    <div class="social-links">
+                        <a href="mailto:jeevanthandey@gmail.com" title="Email" class="email-icon"><i class="fas fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/in/jeevan-m-t-276697290" target="_blank" title="LinkedIn" class="linkedin-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/JeevanMT" target="_blank" title="GitHub" class="github-icon"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Jeevan MT</p>
+        </div>
+    </footer>
 </body>
 </html>
-
-
