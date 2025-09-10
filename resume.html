@@ -2,52 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jeevan MT - Resume</title>
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    />
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <div class="container navbar-container">
-            <h1>Jeevan MT</h1>
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">Jeevan MT</a>
             <nav>
-                <a href="index.html">About</a>
-                <a href="index.html#skills">Skills</a>
-                <a href="index.html#projects">Projects</a>
-                <a href="contact.html">Contact</a>
+                <a href="index.html" class="nav-link">Bio</a>
+                <a href="resume.html" class="nav-link">Resume</a>
+                <a href="photo.html" class="nav-link">Photo</a>
+                <a href="contact.html" class="nav-link">Contact</a>
             </nav>
         </div>
     </header>
 
-    <section id="resume">
+    <main>
+        <section id="resume-content" class="animate-on-scroll">
+            <div class="container">
+                <h2 class="section-title">My Resume</h2>
+                <div class="resume-wrapper">
+                    <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">
+                        You can view or download my complete resume below.
+                    </p>
+                    <a href="path/to/your-resume.pdf" download class="btn" style="display: block; width: fit-content; margin: 0 auto;">Download Resume (PDF)</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
         <div class="container">
-            <h2 class="section-title">My Resume</h2>
-            <p style="text-align: center; font-size: 1.1rem; margin-bottom: 20px;">
-                You can view or download my complete resume below.
+            <p>
+                &copy; 2025 Jeevan MT. All Rights Reserved.
             </p>
-            <div style="text-align: center;">
-                <a href="path/to/your-resume.pdf" target="_blank" class="cta-button">Download Resume (PDF)</a>
-            </div>
-            
-            <br>
-
-            <div style="text-align: center;">
-                <img src="path/to/your-resume-image.jpg" alt="A visual representation of Jeevan's resume." style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>© 2025 Jeevan MT</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
