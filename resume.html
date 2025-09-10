@@ -1,68 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jeevan MT - Resume</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Jeevan MT - Contact</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Resume</h1>
-    <nav>
-      <a href="index.html">Home</a> | 
-      <a href="resume.html">Resume</a> |
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+    <header>
+        <div class="container navbar-container">
+            <h1>Jeevan MT</h1>
+            <nav>
+                <a href="index.html">About</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-  <section id="personal-info">
-    <h2>Personal Information</h2>
-    <p><strong>Name:</strong> Jeevan MT</p>
-    <p><strong>Email:</strong> jeevanthandey@gmail.com</p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jeevan-m-t-276697290" target="_blank">Profile</a></p>
-    <p><strong>GitHub:</strong> <a href="https://github.com/JeevanMT" target="_blank">Profile</a></p>
-  </section>
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-content">
+                <div class="contact-form-container">
+                    <form class="contact-form">
+                        <input type="text" placeholder="Name" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="tel" placeholder="Mobile">
+                        <textarea placeholder="Message" rows="6"></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <p>Or connect with me directly:</p>
+                    <div class="social-links">
+                        <a href="mailto:jeevanthandey@gmail.com" title="Email" class="email-icon"><i class="fas fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/in/jeevan-m-t-276697290" target="_blank" title="LinkedIn" class="linkedin-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/JeevanMT" target="_blank" title="GitHub" class="github-icon"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="education">
-    <h2>Education</h2>
-    <ul>
-      <li>B.E. Computer Science and Engineering – [Your College Name], [Year]</li>
-      <li>Pre-University / High School – [Your School Name], [Year]</li>
-    </ul>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>C++, Java</li>
-      <li>Python (Basics)</li>
-      <li>HTML, CSS</li>
-      <li>Problem Solving</li>
-    </ul>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>Text-based Adventure Game:</strong> A console game with story-driven choices.</li>
-      <li><strong>Virtual Garden Planner:</strong> A tool to design and plan a virtual garden layout.</li>
-      <li><strong>To-Do List Tracker:</strong> A simple task management web app.</li>
-    </ul>
-  </section>
-
-  <section id="achievements">
-    <h2>Achievements</h2>
-    <ul>
-      <li>Completed coursework in Data Structures and Algorithms</li>
-      <li>Built multiple academic projects in C++ and Java</li>
-    </ul>
-  </section>
-
-  <footer>
-    <p>© 2025 Jeevan MT</p>
-  </footer>
+    <footer>
+        <div class="container">
+            <p>© 2025 Jeevan MT</p>
+        </div>
+    </footer>
 </body>
 </html>
-
-
