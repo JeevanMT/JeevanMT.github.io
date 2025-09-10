@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jeevan MT - Portfolio</title>
+    <title>Jeevan MT - Bio</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,253 +17,38 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     
-    <style>
-        :root {
-            --background-color: #f0f4f8; /* A light, calming blue-grey */
-            --text-color-primary: #1a202c; /* Almost black for high readability */
-            --text-color-secondary: #4a5568; /* Dark grey for secondary text */
-            --card-background: #ffffff;
-            --accent-color: #2b6cb0; /* A strong, professional blue */
-            --accent-light: #63b3ed; /* Lighter blue for accents */
-            --divider-color: #e2e8f0;
-            --box-shadow-subtle: 0 4px 6px rgba(0, 0, 0, 0.05),
-                                 0 1px 3px rgba(0, 0, 0, 0.03);
-            --box-shadow-hover: 0 8px 12px rgba(0, 0, 0, 0.1),
-                                0 4px 8px rgba(0, 0, 0, 0.06);
-        }
-
-        /* General & Layout */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--background-color);
-            color: var(--text-color-primary);
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-
-        section {
-            padding: 4rem 0;
-        }
-
-        /* Header & Navigation */
-        .header {
-            background-color: var(--card-background);
-            box-shadow: var(--box-shadow-subtle);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text-color-primary);
-            text-decoration: none;
-        }
-
-        .nav-link {
-            color: var(--text-color-secondary);
-            text-decoration: none;
-            font-weight: 500;
-            margin-left: 1.5rem;
-            transition: color 0.2s ease;
-        }
-
-        .nav-link:hover {
-            color: var(--accent-color);
-        }
-
-        /* Hero Section */
-        .hero {
-            background-color: var(--background-color);
-            text-align: center;
-            padding: 6rem 1.5rem;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: var(--accent-color);
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            color: var(--text-color-secondary);
-            margin-bottom: 2rem;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 0.75rem 2rem;
-            background-color: var(--accent-color);
-            color: var(--card-background);
-            text-decoration: none;
-            border-radius: 9999px; /* Pill shape */
-            font-weight: 600;
-            transition: transform 0.2s ease, background-color 0.2s ease;
-        }
-
-        .btn:hover {
-            background-color: var(--accent-light);
-            transform: translateY(-2px);
-        }
-
-        /* Section Titles */
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 2.5rem;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 4rem;
-            height: 4px;
-            background-color: var(--accent-color);
-            margin: 0.75rem auto 0;
-            border-radius: 2px;
-        }
-
-        /* Card Layout for Skills & Projects */
-        .grid-layout {
-            display: grid;
-            gap: 1.5rem;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        }
-
-        .card {
-            background-color: var(--card-background);
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            box-shadow: var(--box-shadow-subtle);
-            transition: box-shadow 0.2s ease, transform 0.2s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .card:hover {
-            box-shadow: var(--box-shadow-hover);
-            transform: translateY(-5px);
-        }
-
-        .card-icon {
-            font-size: 2.5rem;
-            color: var(--accent-color);
-            margin-bottom: 1rem;
-        }
-
-        .card h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .card p {
-            color: var(--text-color-secondary);
-            font-size: 0.9rem;
-        }
-        
-        /* Contact Section */
-        .contact-form {
-            display: grid;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .input-field,
-        .textarea-field {
-            width: 100%;
-            padding: 0.75rem 1rem;
-            border: 1px solid var(--divider-color);
-            border-radius: 0.5rem;
-            font-family: inherit;
-            background-color: var(--background-color);
-            color: var(--text-color-primary);
-        }
-
-        .textarea-field {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .social-links {
-            text-align: center;
-            margin-top: 1.5rem;
-        }
-
-        .social-link {
-            font-size: 1.5rem;
-            color: var(--text-color-secondary);
-            margin: 0 0.75rem;
-            transition: color 0.2s ease;
-        }
-
-        .social-link:hover {
-            color: var(--accent-color);
-        }
-
-        /* Footer */
-        .footer {
-            background-color: var(--card-background);
-            text-align: center;
-            padding: 1.5rem 0;
-            font-size: 0.9rem;
-            color: var(--text-color-secondary);
-            border-top: 1px solid var(--divider-color);
-        }
-        
-        .footer a {
-            color: var(--accent-color);
-            text-decoration: none;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <header class="header">
         <div class="container header-content">
-            <a href="#" class="logo">Jeevan MT</a>
+            <a href="index.html" class="logo">Jeevan MT</a>
             <nav>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                <a href="index.html" class="nav-link">Bio</a>
+                <a href="resume.html" class="nav-link">Resume</a>
+                <a href="contact.html" class="nav-link">Contact</a>
             </nav>
         </div>
     </header>
 
     <main>
         <section class="hero" id="home">
-            <div class="container">
-                <h1>Hello, I'm Jeevan</h1>
-                <p>CSE Student | Developer | Tech Enthusiast</p>
-                <a href="#projects" class="btn">View My Work</a>
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>Hello, I'm Jeevan</h1>
+                    <p>CSE Student | Developer | Tech Enthusiast</p>
+                    <a href="#projects" class="btn">View My Work</a>
+                </div>
+                <div class="hero-image">
+                    <img src="my-photo.jpeg" alt="A professional photo of Jeevan MT" class="my-photo" />
+                </div>
             </div>
         </section>
 
         <section id="about">
             <div class="container">
                 <h2 class="section-title">About Me</h2>
-                <p style="text-align: center; color: var(--text-color-secondary);">
+                <p class="section-paragraph">
                     I'm a Computer Science and Engineering student with a strong passion for programming and creating impactful, real-world projects. I'm constantly focused on honing my problem-solving skills and staying up-to-date with modern technologies. I love building things that make a difference, whether it's a simple tool or a complex application.
                 </p>
             </div>
@@ -308,28 +93,6 @@
                         <h3>To-Do List Tracker</h3>
                         <p>A responsive task management web application that allows users to add, remove, and track tasks efficiently.</p>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
-                <form class="contact-form">
-                    <input type="text" class="input-field" placeholder="Your Name" required />
-                    <input type="email" class="input-field" placeholder="Your Email" required />
-                    <input type="tel" class="input-field" placeholder="Your Mobile" />
-                    <textarea
-                        class="textarea-field"
-                        placeholder="Your Message"
-                        rows="6"
-                    ></textarea>
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/jeevan-m-t-276697290" target="_blank" class="social-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/JeevanMT" target="_blank" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="mailto:jeevanthandey@gmail.com" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
         </section>
