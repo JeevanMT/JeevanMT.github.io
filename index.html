@@ -1,458 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Portfolio - Jeevan MT</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    
-    <style>
-        :root {
-            --primary-color: #4a90e2; /* A modern blue */
-            --secondary-color: #50e3c2; /* A complementary green for accents */
-            --background-dark: #1f2833;
-            --background-light: #f5f7fa;
-            --text-light: #fefefe;
-            --text-dark: #333;
-            --card-bg: #fff;
-            --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-            transition: all 0.3s ease;
-        }
-
-        body {
-            background: var(--background-light);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-
-        /* Utility classes */
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 0 20px;
-        }
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            color: var(--primary-color);
-            position: relative;
-        }
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: var(--secondary-color);
-            border-radius: 2px;
-        }
-
-        /* Navbar */
-        header {
-            background: var(--background-dark);
-            color: var(--text-light);
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: var(--shadow);
-        }
-        .navbar-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        header h1 {
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-        nav a {
-            color: var(--text-light);
-            margin-left: 20px;
-            text-decoration: none;
-            font-weight: 600;
-            position: relative;
-        }
-        nav a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            display: block;
-            margin-top: 5px;
-            right: 0;
-            background: var(--secondary-color);
-            transition: width 0.3s ease;
-        }
-        nav a:hover::after {
-            width: 100%;
-            left: 0;
-            background: var(--secondary-color);
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 150px 0;
-            text-align: center;
-            background: linear-gradient(135deg, #2a5298, #1e3c72);
-            color: var(--text-light);
-        }
-        .hero h2 {
-            font-size: 3.5rem;
-            margin-bottom: 15px;
-            font-weight: 700;
-            line-height: 1.2;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        .cta-button {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 12px 30px;
-            background: var(--secondary-color);
-            color: var(--background-dark);
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        /* General Section styles */
-        section {
-            padding: 80px 0;
-        }
-        
-        /* About Section */
-        #about p {
-            text-align: center;
-            max-width: 800px;
-            margin: auto;
-            font-size: 1.1rem;
-        }
-
-        /* Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 20px;
-            justify-content: center;
-            text-align: center;
-        }
-        .skill-card {
-            background: var(--card-bg);
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
-            transform-origin: center;
-            text-align: center;
-        }
-        .skill-card:hover {
-            transform: translateY(-5px) scale(1.03);
-            background: #e9f5ff;
-            color: var(--primary-color);
-        }
-        .skill-card i {
-            font-size: 3rem;
-            color: var(--primary-color);
-            margin-bottom: 10px;
-        }
-        .skill-card h4 {
-            font-size: 1rem;
-            font-weight: 600;
-        }
-        /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        .project-card {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            position: relative;
-            overflow: hidden;
-        }
-        .project-card h3 {
-            font-size: 1.5rem;
-            color: var(--primary-color);
-            margin-bottom: 10px;
-        }
-        .project-card p {
-            font-size: 1rem;
-            color: #555;
-        }
-        
-        /* Contact Section */
-        #contact {
-            background: var(--background-dark); /* Dark background for the contact section */
-            color: var(--text-light);
-            padding: 80px 0;
-        }
-
-        #contact .section-title {
-            color: var(--text-light); /* Title color for dark background */
-        }
-        #contact .section-title::after {
-            background: var(--secondary-color);
-        }
-
-        .contact-content {
-            display: flex;
-            flex-wrap: wrap; /* Allow wrapping for smaller screens */
-            justify-content: center;
-            align-items: flex-start; /* Align items to the start of the cross axis */
-            gap: 40px;
-            margin-top: 40px;
-        }
-
-        .contact-form-container {
-            flex: 1; /* Take up available space */
-            min-width: 300px; /* Minimum width for the form */
-            max-width: 500px; /* Maximum width for the form */
-            background: var(--background-dark);
-            padding: 0;
-            border-radius: 10px;
-        }
-
-        .contact-form input[type="text"],
-        .contact-form input[type="email"],
-        .contact-form input[type="tel"],
-        .contact-form textarea {
-            width: 100%;
-            padding: 15px 20px;
-            margin-bottom: 20px;
-            border: none;
-            border-radius: 8px;
-            background: #f0f2f5; /* Light grey background for input fields */
-            color: var(--text-dark);
-            font-size: 1rem;
-            outline: none;
-        }
-
-        .contact-form textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .contact-form button[type="submit"] {
-            width: 100%;
-            padding: 15px;
-            background: #007bff; /* Bright blue for submit button */
-            color: var(--text-light);
-            border: none;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.3s ease, transform 0.2s ease;
-        }
-
-        .contact-form button[type="submit"]:hover {
-            background: #0056b3; /* Darker blue on hover */
-            transform: translateY(-2px);
-        }
-
-        .contact-info {
-            flex: 1; /* Take up available space */
-            min-width: 250px; /* Minimum width for contact info */
-            text-align: center;
-            padding-top: 20px;
-        }
-
-        .contact-info p {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-        }
-
-        .contact-info .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--background-dark);
-            border: 1px solid var(--text-light);
-            height: 50px;
-            width: 50px;
-            margin: 0 8px;
-            border-radius: 50%;
-            color: var(--text-light);
-            font-size: 1.3rem;
-            transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
-        }
-
-        .contact-info .social-links a:hover {
-            background: var(--primary-color);
-            color: var(--text-light);
-            transform: translateY(-3px);
-            border-color: var(--primary-color);
-        }
-
-        /* Adjust social icon colors */
-        .contact-info .social-links a.email-icon { background-color: #f0f2f5; color: #333; }
-        .contact-info .social-links a.email-icon:hover { background-color: var(--primary-color); color: var(--text-light); }
-        .contact-info .social-links a.linkedin-icon { background-color: #f0f2f5; color: #0e76a8; }
-        .contact-info .social-links a.linkedin-icon:hover { background-color: #0e76a8; color: var(--text-light); }
-        .contact-info .social-links a.github-icon { background-color: #f0f2f5; color: #181717; }
-        .contact-info .social-links a.github-icon:hover { background-color: #181717; color: var(--text-light); }
-
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 30px 0;
-            background: var(--background-dark);
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-        footer a {
-            color: var(--secondary-color);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        /* Media Queries for Responsiveness */
-        @media (max-width: 768px) {
-            .contact-content {
-                flex-direction: column;
-                align-items: center;
-            }
-            .contact-form-container {
-                width: 100%;
-                max-width: 400px;
-            }
-            .contact-info {
-                width: 100%;
-                margin-top: 40px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeevan MT - Bio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container navbar-container">
-            <h1>Jeevan MT</h1>
-            <nav>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
-    </header>
+  <header>
+    <h1>Jeevan MT</h1>
+    <p>Computer Science and Engineering Student</p>
+    <nav>
+      <a href="index.html">Home</a> | 
+      <a href="resume.html">Resume</a>
+    </nav>
+  </header>
 
-    <section class="hero">
-        <div class="container">
-            <h2>Hello, I'm Jeevan</h2>
-            <p>CSE Student | Developer | Tech Enthusiast</p>
-            <a href="#projects" class="cta-button">View My Work</a>
-        </div>
-    </section>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm a Computer Science and Engineering student who enjoys programming and building useful projects. 
+      I focus on improving my problem-solving skills and learning modern technologies.
+    </p>
+  </section>
 
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <p>
-                <p>
-  I’m a Computer Science and Engineering student with an interest in programming and building useful projects. 
-  I enjoy learning new technologies and improving my problem-solving skills.
-</p>
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>C++</li>
+      <li>Java</li>
+      <li>Python (basics)</li>
+      <li>HTML & CSS</li>
+    </ul>
+  </section>
 
-            </p>
-        </div>
-    </section>
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li>Text-based Adventure Game</li>
+      <li>Virtual Garden Planner</li>
+      <li>To-Do List Tracker</li>
+    </ul>
+  </section>
 
-    <section id="skills">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <i class="fas fa-code"></i>
-                    <h4>C++ / Java</h4>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-laptop-code"></i>
-                    <h4>Web Development</h4>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-python"></i>
-                    <h4>Python</h4>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      <a href="mailto:jeevanthandey@gmail.com">📧 jeevanthandey@gmail.com</a>
+    </p>
+    <p>
+      <a href="https://www.linkedin.com/in/jeevan-m-t-276697290" target="_blank">🔗 LinkedIn</a>
+    </p>
+    <p>
+      <a href="https://github.com/JeevanMT" target="_blank">💻 GitHub</a>
+    </p>
+  </section>
 
-    <section id="projects">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Text-Based Adventure Game</h3>
-                    <p>A console-based interactive game where users navigate a story by making choices, built to strengthen fundamental programming logic.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Virtual Garden Planner</h3>
-                    <p>A simple web-based tool for users to visualize and organize a virtual garden layout digitally, showcasing front-end development skills.</p>
-                </div>
-                <div class="project-card">
-                    <h3>To-Do List Tracker</h3>
-                    <p>A responsive task management web application that allows users to add, remove, and track tasks efficiently.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2 class="section-title">Contact Me</h2>
-            <div class="contact-content">
-                <div class="contact-form-container">
-                    <form class="contact-form">
-                        <input type="text" placeholder="Name" required>
-                        <input type="email" placeholder="Email" required>
-                        <input type="tel" placeholder="Mobile">
-                        <textarea placeholder="Message" rows="6"></textarea>
-                        <button type="submit">Submit</button>
-                    </form>
-                </div>
-                <div class="contact-info">
-                    <p>Or connect with me directly:</p>
-                    <div class="social-links">
-                        <a href="mailto:jeevanthandey@gmail.com" title="Email" class="email-icon"><i class="fas fa-envelope"></i></a>
-                        <a href="https://www.linkedin.com/in/jeevan-m-t-276697290" target="_blank" title="LinkedIn" class="linkedin-icon"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/JeevanMT" target="_blank" title="GitHub" class="github-icon"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>© 2025 Jeevan MT</p>
-        </div>
-    </footer>
+  <footer>
+    <p>© 2025 Jeevan MT</p>
+  </footer>
 </body>
 </html>
